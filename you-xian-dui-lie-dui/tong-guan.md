@@ -8,7 +8,7 @@
 import os
 import sys
 from queue import PriorityQueue
-# 请在此输入您的代码
+
 n, p = map(int, input().split())
 path = [[] for _ in range(n + 1)]
 sk = [() for _ in range(n + 1)]
