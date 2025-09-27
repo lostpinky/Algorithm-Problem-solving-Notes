@@ -12,9 +12,7 @@ class Solution:
             if i == len(s):
                 return count1 
             res = 0
-
             up = int(s[i]) if is_limit else 9
-
             for d in range(0, up + 1):
                 res += f(i + 1, count1 + int(d == 2), is_limit and d == up)
             return res
