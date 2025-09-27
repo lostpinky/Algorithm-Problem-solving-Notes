@@ -11,6 +11,7 @@
 </strong>    def minIncrementOperations(self, nums: List[int], k: int) -> int:
         # dp1代表使前一个数字大于等于k时的最小增量运算数
         dp1, dp2, dp3 = 0, 0, 0
+        
         for i in range(len(nums)):
             dp1,dp2,dp3 = min(dp1,dp2,dp3) + max(0, k - nums[i]), dp1, dp2
         return min(dp1, dp2, dp3)
