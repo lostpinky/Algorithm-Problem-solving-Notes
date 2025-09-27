@@ -15,7 +15,7 @@
 ```python
 def lowbit(x):
     """
-    x 的二进制中，最低位的 1 以及后面所有 0 组成的数。
+    x 的二进制中，最低位的 1 以及后面所有 0 组成的数。  
     lowbit(0b01011000) == 0b00001000
             ~~~~~^~~
     lowbit(0b01110010) == 0b00000010
@@ -24,7 +24,7 @@ def lowbit(x):
     return x & -x
 ```
 
-## 树状数组模板（维护前缀最大值）
+## 树状数组模板（维护前缀最大值） 
 
 ```python
 class BIT:
@@ -33,7 +33,7 @@ class BIT:
         
     def update(self, i: int, val: int) -> None:
         while i < len(self.tree):
-            self.tree[i] = max(self.tree[i], val)
+            self.tree[i] = max(self.tree[i], val) 
             i += i & -i
     
     def pre_max(self, i: int) -> int:
