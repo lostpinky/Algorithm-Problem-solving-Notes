@@ -39,6 +39,7 @@ sys.setrecursionlimit(10**5 + 1)
 n = int(input())
 path = [[] for _ in range(n + 1)]
 ans = 0
+
 for i in range(1, n):
     v, u, w = map(int, input().split())
     ans += w * 2
@@ -46,6 +47,7 @@ for i in range(1, n):
     path[u].append((v, w))
 state = [0,0]
 vis = [False] * (n + 1)
+
 def dfs(node,length):
     if length > state[1]:
         state[1] = length
