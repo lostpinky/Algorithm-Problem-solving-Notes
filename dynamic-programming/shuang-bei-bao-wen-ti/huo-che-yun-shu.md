@@ -8,9 +8,7 @@
 import itertools
 n ,a, b = map(int, input().split())
 w = list(map(int, input().split()))
-
 dp = [[0]* (b+1) for _ in range(a+1)]
-
 ans = 0
 for i in range(n):
     for j in range(a, -1, -1):
