@@ -17,6 +17,7 @@ l, r = input(),input()
 s = ''
 M = 998244353
 mod = 9 * 8 * 7 * 6 * 5 * 4 * 3 * 2 * 1
+
 @lru_cache()
 def f(i, pre_mod, mod, is_limit):
     up = int(s[i]) if is_limit else 9
