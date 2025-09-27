@@ -14,9 +14,11 @@
 class Solution:
     def countPairs(self, n: int, edges: List[List[int]]) -> int:
         paths = [[] for _ in range(n)]
+
         for i, j in edges:
             paths[i].append(j)
             paths[j].append(i)
+
         groups = []
         ans = 0
         tmp = []
@@ -25,6 +27,7 @@ class Solution:
             for t in paths[node]:
                 if t not in tmp:
                     dfs(t)
+
         for i in range(n):
             if i not in tmp:
                 cur = len(tmp)
