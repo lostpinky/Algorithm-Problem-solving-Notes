@@ -2,8 +2,10 @@
 
 ```python
 # deg[i]表示节点i的入度
+
 # 找出入度为0的节点初始化双端队列进行bfs
 dq = deque(i for i,d in enumerate(deg) if d == 0)
+
 # 拓扑排序
 while dq:
     # 弹出队列左端点
