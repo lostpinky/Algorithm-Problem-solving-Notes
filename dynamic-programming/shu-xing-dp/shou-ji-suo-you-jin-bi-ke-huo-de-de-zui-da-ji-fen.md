@@ -2,7 +2,6 @@
 
 [100108. 收集所有金币可获得的最大积分](https://leetcode.cn/problems/maximum-points-after-collecting-coins-from-all-nodes/)\
 
-
 记忆化搜索：dfs(i, pre, fa)表示以 i 为根节点的子树，上层节点使用pre次第二种操作，fa为父节点，该情况下的最大积分。
 
 时间复杂度 = 状态数 \* 转移次数
