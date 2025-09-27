@@ -52,6 +52,7 @@ if __name__ == '__main__':
         'C': {'A': 4, 'B': 1, 'D': 3},
         'D': {'B': 7, 'C': 3}
     }
+
     start_node = 'A'
     end_node = 'D'
     dist, path = dijkstra(graph, start_node, end_node)
