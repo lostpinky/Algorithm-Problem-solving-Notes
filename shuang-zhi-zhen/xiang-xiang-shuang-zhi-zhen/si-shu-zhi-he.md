@@ -13,6 +13,7 @@ class Solution:
         n = len(nums)
         nums.sort()
         ans = []
+
         for i in range(n-3):
             if i > 0 and nums[i] == nums[i-1]:
                 continue
@@ -20,6 +21,7 @@ class Solution:
                 break
             if nums[i] + nums[-1] + nums[-2] + nums[-3] < target:
                 continue
+
             for j in range(i+1, n-2):
                 # 注意此处一定要判断j > i + 1，不能因为与nums[i]相等而跳过
                 if j > i + 1 and nums[j] == nums[j-1]:
@@ -30,6 +32,7 @@ class Solution:
                     continue
                 x = j + 1
                 y = n - 1
+
                 while x < y:
                     s = nums[i] + nums[j] + nums[x] + nums[y]
                     if s < target:
