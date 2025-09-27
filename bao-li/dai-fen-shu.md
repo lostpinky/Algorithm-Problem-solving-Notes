@@ -9,7 +9,7 @@
 from itertools import permutations
 n = int(input())
 nums = '123456789'
-ans = 0
+ans = 0    
 for p in permutations(nums):
     p = ''.join(p)
     for i in range(1,len(str(n)) + 1):
