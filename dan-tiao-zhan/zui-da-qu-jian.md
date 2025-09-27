@@ -8,7 +8,7 @@ nums = list(map(int, input().split()))
 
 def right_bigger():
     st = []
-    right = [-1] * n
+    right = [-1] * n    
     for i in range(n):
         while st and nums[st[-1]] > nums[i]:
             right[st.pop()] = i - 1
