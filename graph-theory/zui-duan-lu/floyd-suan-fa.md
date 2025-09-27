@@ -18,6 +18,7 @@ class Solution:
         
         min_cnt = inf
         ans = -1
+
         for i in range(n):
             cnt = 0
             for j in range(n):
